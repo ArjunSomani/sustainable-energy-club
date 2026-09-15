@@ -4,25 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LWHS Sustainable Energy Club</title>
-  <meta name="description" content="The LWHS Sustainable Energy Club builds an inclusive community of students who learn, debate, and act to power our world without warming it." />
+  <meta name="description" content="A Lick-Wilmerding High School student club learning, debating, and acting to power our world without warming it." />
+  <meta name="theme-color" content="#1e5631" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13 2 4 14h6l-1 8 9-12h-6z' fill='%231e5631'/%3E%3C/svg%3E" />
 </head>
 <body>
+  <a class="skip" href="#purpose">Skip to content</a>
+
   <!-- ===================== NAV ===================== -->
   <header class="nav" id="top">
     <div class="wrap nav__inner">
-      <a class="brand" href="#top">
-        <span class="brand__mark" aria-hidden="true">⚡</span>
-        <span class="brand__text">LWHS&nbsp;<b>Sustainable Energy</b>&nbsp;Club</span>
+      <a class="brand" href="#top" aria-label="LWHS Sustainable Energy Club — home">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
+        <span class="brand__text">Sustainable Energy Club</span>
       </a>
       <nav class="nav__links" aria-label="Primary">
         <a href="#purpose">Purpose</a>
-        <a href="#goals">Goals</a>
-        <a href="#partners">Partners Project</a>
+        <a href="#goals">What we do</a>
+        <a href="#partners">Partners project</a>
         <a href="#join" class="nav__cta">Join</a>
       </nav>
     </div>
@@ -30,153 +33,174 @@
 
   <!-- ===================== HERO ===================== -->
   <section class="hero">
-    <div class="hero__glow" aria-hidden="true"></div>
-    <div class="wrap hero__inner">
-      <p class="eyebrow">Lick-Wilmerding High School</p>
-      <h1 class="hero__title">Power our world<br /><span class="grad">without warming it.</span></h1>
+    <div class="wrap">
+      <p class="hero__meta">Lick-Wilmerding High School <span aria-hidden="true">·</span> Student Club</p>
+      <h1 class="hero__title">Power our world<br />without&nbsp;warming&nbsp;it.</h1>
       <p class="hero__lede">
-        We build an inclusive community of students who <strong>learn</strong>,
-        <strong>debate</strong>, and <strong>act</strong> on clean energy —
-        from solar panels to the power grid to real projects with real partners.
+        We're a community of students who <em>learn</em>, <em>debate</em>, and
+        <em>act</em> on clean energy — from how a solar panel works, to how the
+        power grid breathes, to real projects that cut energy waste right here in
+        our community.
       </p>
       <div class="hero__actions">
-        <a href="#join" class="btn btn--primary">Join the club</a>
-        <a href="#goals" class="btn btn--ghost">See what we do</a>
+        <a href="#join" class="btn btn--primary">Sign up to join</a>
+        <a href="#goals" class="btn btn--ghost">What we actually do</a>
       </div>
-      <ul class="hero__chips" aria-label="Focus areas">
-        <li>☀️ Solar</li>
-        <li>💨 Wind</li>
-        <li>💧 Hydro</li>
-        <li>⚛️ Nuclear</li>
-        <li>🔌 The Grid</li>
-        <li>📊 Real data</li>
-      </ul>
     </div>
+    <div class="wrap hero__rule" aria-hidden="true"></div>
   </section>
 
   <main>
     <!-- ===================== PURPOSE ===================== -->
     <section id="purpose" class="section">
-      <div class="wrap">
-        <p class="section__kicker">Purpose</p>
-        <h2 class="section__title">Why we exist</h2>
-        <p class="purpose__statement">
-          The LWHS Sustainable Energy Club builds an <mark>inclusive community of
-          students</mark> who learn, debate, and act to power our world without
-          warming it.
-        </p>
+      <div class="wrap grid2">
+        <p class="label">Our purpose</p>
+        <div>
+          <p class="lead">
+            The Sustainable Energy Club builds an <u>inclusive community of
+            students</u> who learn, debate, and act to power our world without
+            warming it.
+          </p>
+          <p class="muted">
+            No prior expertise required — just curiosity. We keep things hands-on,
+            argue in good faith, and turn what we learn into action.
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- ===================== GOALS ===================== -->
-    <section id="goals" class="section section--muted">
+    <section id="goals" class="section section--alt">
       <div class="wrap">
-        <p class="section__kicker">Goals</p>
-        <h2 class="section__title">What we do</h2>
+        <div class="grid2 grid2--head">
+          <p class="label">What we do</p>
+          <h2 class="h2">Three ways we dig in.</h2>
+        </div>
 
-        <div class="goals">
+        <ol class="agenda">
           <!-- Goal 1 -->
-          <article class="card">
-            <div class="card__num">01</div>
-            <h3 class="card__title">Learn &amp; debate energy sources</h3>
-            <p class="card__body">
-              Dig into the pros and cons of various clean and low-emission energy
-              sources — with hands-on activities to keep it engaging.
-            </p>
-            <ul class="taglist">
-              <li>☀️ Solar</li>
-              <li>💨 Wind</li>
-              <li>💧 Hydro</li>
-              <li>⚛️ Nuclear</li>
-            </ul>
-          </article>
+          <li class="agenda__item">
+            <div class="agenda__no">01</div>
+            <div class="agenda__body">
+              <h3 class="h3">Learn &amp; debate energy sources</h3>
+              <p class="muted">
+                We weigh the real pros and cons of clean and low-emission energy —
+                with hands-on activities so it never turns into a lecture.
+              </p>
+              <ul class="sources">
+                <li>Solar</li>
+                <li>Wind</li>
+                <li>Hydro</li>
+                <li>Nuclear</li>
+              </ul>
+            </div>
+          </li>
 
           <!-- Goal 2 -->
-          <article class="card">
-            <div class="card__num">02</div>
-            <h3 class="card__title">Understand the grid &amp; the data</h3>
-            <p class="card__body">
-              Learn how the energy grid works and analyze real energy-usage data
-              to see how demand actually behaves.
-            </p>
-            <ul class="deflist">
-              <li>
-                <b>Load shapes</b>
-                <span>Demand for electricity across different time frames.</span>
-              </li>
-              <li>
-                <b>Baseload vs. peak load</b>
-                <span>Continuous 24/7 demand (refrigerators) vs. short bursts (air conditioners).</span>
-              </li>
-              <li>
-                <b>Time-of-use pricing</b>
-                <span>How the cost of electricity varies by time of day, week, and year.</span>
-              </li>
-            </ul>
-          </article>
+          <li class="agenda__item">
+            <div class="agenda__no">02</div>
+            <div class="agenda__body">
+              <h3 class="h3">Read the grid like a language</h3>
+              <p class="muted">
+                We learn how the electricity grid works and analyze real usage
+                data to see how demand actually behaves.
+              </p>
+              <dl class="terms">
+                <div>
+                  <dt>Load shapes</dt>
+                  <dd>Electricity demand plotted across different time frames.</dd>
+                </div>
+                <div>
+                  <dt>Baseload vs. peak load</dt>
+                  <dd>Steady 24/7 draw (a refrigerator) vs. short spikes (an air conditioner).</dd>
+                </div>
+                <div>
+                  <dt>Time-of-use pricing</dt>
+                  <dd>Why the same kilowatt-hour costs more or less by hour, day, and season.</dd>
+                </div>
+              </dl>
+            </div>
+          </li>
 
           <!-- Goal 3 -->
-          <article class="card card--feature">
-            <div class="card__num">03</div>
-            <h3 class="card__title">LWHS Community Powering Partners Project</h3>
-            <p class="card__body">
-              Our flagship, hands-on project: team up with LWHS Center partners and
-              help them cut energy waste with real measurement and analysis.
-            </p>
-            <ol class="steps">
-              <li><span>Partner up</span>Recruit 1–2 LWHS Center partners to work with the club.</li>
-              <li><span>Investigate</span>Take their PG&amp;E data and visit onsite to identify culprits and set up smart-plug analysis.</li>
-              <li><span>Analyze</span>Create and analyze a data dashboard.</li>
-              <li><span>Recommend</span>Present clear, actionable recommendations.</li>
-              <li><span>Sustain</span>Build an ongoing website for them to upload data and track impact over time.</li>
-            </ol>
-          </article>
-        </div>
+          <li class="agenda__item">
+            <div class="agenda__no">03</div>
+            <div class="agenda__body">
+              <h3 class="h3">The Community Powering Partners Project</h3>
+              <p class="muted">
+                Our flagship, get-your-hands-dirty project: partner with an LWHS
+                Center and help them find — and fix — where energy is being wasted.
+              </p>
+              <a href="#partners" class="textlink">See how the project works →</a>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- ===================== PARTNERS CALLOUT ===================== -->
+    <!-- ===================== PARTNERS PROJECT ===================== -->
     <section id="partners" class="section">
-      <div class="wrap partners">
-        <div class="partners__text">
-          <p class="section__kicker">Flagship project</p>
-          <h2 class="section__title">From classroom to real impact</h2>
-          <p>
-            The Community Powering Partners Project turns everything we learn into
-            action. Students work directly with community partners — measuring,
-            analyzing, and recommending — then leave behind a living dashboard so
-            partners can track their impact long after our visit.
-          </p>
-          <a href="#join" class="btn btn--primary">Get involved</a>
+      <div class="wrap">
+        <div class="grid2 grid2--head">
+          <p class="label">Flagship project</p>
+          <h2 class="h2">Community Powering Partners.</h2>
         </div>
-        <div class="partners__stats" aria-hidden="false">
-          <div class="stat"><b>1–2</b><span>Center partners per cycle</span></div>
-          <div class="stat"><b>4</b><span>Energy sources we explore</span></div>
-          <div class="stat"><b>∞</b><span>Impact tracked over time</span></div>
-        </div>
+        <p class="lead lead--narrow">
+          We take everything we've learned and put it to work for real partners —
+          measuring, analyzing, and leaving behind something that keeps helping
+          after we're gone.
+        </p>
+
+        <ol class="process">
+          <li>
+            <span class="process__n">1</span>
+            <h3 class="h4">Partner up</h3>
+            <p class="muted">Recruit 1–2 LWHS Center partners to work with the club.</p>
+          </li>
+          <li>
+            <span class="process__n">2</span>
+            <h3 class="h4">Investigate on site</h3>
+            <p class="muted">Take their PG&amp;E data and visit in person to spot culprits and set up smart-plug analysis.</p>
+          </li>
+          <li>
+            <span class="process__n">3</span>
+            <h3 class="h4">Build the dashboard</h3>
+            <p class="muted">Create and analyze a data dashboard from what we measure.</p>
+          </li>
+          <li>
+            <span class="process__n">4</span>
+            <h3 class="h4">Present recommendations</h3>
+            <p class="muted">Turn the analysis into clear, doable changes for the partner.</p>
+          </li>
+          <li>
+            <span class="process__n">5</span>
+            <h3 class="h4">Leave a living tool</h3>
+            <p class="muted">Build an ongoing website partners use to upload data and track impact over time.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
     <!-- ===================== JOIN / FORM ===================== -->
-    <section id="join" class="section section--join">
-      <div class="wrap join">
+    <section id="join" class="section section--alt">
+      <div class="wrap grid-join">
         <div class="join__intro">
-          <p class="section__kicker">Join us</p>
-          <h2 class="section__title">Sign up for the club</h2>
-          <p>
-            Interested in learning, debating, and acting on clean energy? Fill out
-            the form and we'll be in touch about meetings and our next project.
+          <p class="label">Join us</p>
+          <h2 class="h2">Come power the future with us.</h2>
+          <p class="muted">
+            Fill out the form and we'll be in touch about meeting times and our
+            next project. Everyone's welcome — bring your questions.
           </p>
         </div>
 
         <!--
           ========================================================================
-          HOW TO CONNECT YOUR GOOGLE FORM (results land in a Google Sheet you own):
-          1. Open your Google Form → click "Send" → the < > (embed) tab.
-          2. Copy ONLY the src="..." URL from the code it gives you
-             (it looks like: https://docs.google.com/forms/d/e/XXXX/viewform?embedded=true).
-          3. Paste it into the src="" of the <iframe> below, replacing the placeholder.
-          4. To see responses: open the Form → "Responses" tab → "Link to Sheets".
+          CONNECT YOUR GOOGLE FORM (responses collect in a Google Sheet you own):
+          1. In your Google Form, click "Send" -> the < > (embed HTML) tab.
+          2. Copy ONLY the src="..." URL. It looks like:
+             https://docs.google.com/forms/d/e/XXXX/viewform?embedded=true
+          3. Paste it below into data-google-form-src="", replacing the placeholder.
+          4. See responses: Form -> "Responses" tab -> "Link to Sheets".
           ========================================================================
         -->
         <div class="join__form">
@@ -191,17 +215,13 @@
               marginheight="0"
               marginwidth="0"
               loading="lazy">
-              Loading…
             </iframe>
-            <!-- Fallback shown until a real Google Form URL is added above -->
             <div class="formframe__placeholder" id="formPlaceholder">
-              <div class="formframe__icon" aria-hidden="true">📝</div>
-              <h3>Sign-up form goes here</h3>
-              <p>
-                Paste your Google Form embed link into <code>index.html</code>
-                (see the instructions in the code comment right above this form),
-                and it will appear here automatically. Responses will collect in a
-                Google Sheet you control.
+              <h3 class="h4">Sign-up form drops in here</h3>
+              <p class="muted">
+                Paste your Google Form's embed link into <code>index.html</code>
+                (see the note in the code just above this form) and it appears
+                automatically — responses collect in a Google Sheet you control.
               </p>
             </div>
           </div>
@@ -213,9 +233,12 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="wrap footer__inner">
-      <span class="brand__mark" aria-hidden="true">⚡</span>
-      <p>LWHS Sustainable Energy Club — learn · debate · act.</p>
-      <a href="#top" class="footer__top">Back to top ↑</a>
+      <a class="brand" href="#top">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
+        <span class="brand__text">Sustainable Energy Club</span>
+      </a>
+      <p class="footer__tag">Learn. Debate. Act. — Lick-Wilmerding High School</p>
+      <a href="#top" class="textlink footer__top">Back to top ↑</a>
     </div>
   </footer>
 

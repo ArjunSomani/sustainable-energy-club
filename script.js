@@ -36,7 +36,7 @@
   /* ------------------------------------------------------------------
      Scroll reveal for sections/cards (respects reduced-motion via CSS).
   ------------------------------------------------------------------ */
-  var targets = document.querySelectorAll(".card, .stat, .purpose__statement, .partners__text, .join__intro");
+  var targets = document.querySelectorAll(".agenda__item, .process li, .lead, .join__intro");
   targets.forEach(function (el) { el.classList.add("reveal"); });
 
   if ("IntersectionObserver" in window) {
