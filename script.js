@@ -37,6 +37,32 @@
   }
 
   /* ------------------------------------------------------------------
+     In-page navigation without touching the URL.
+     Anchor links (href="#...") normally append the fragment to the address
+     bar, so if someone copies the URL after clicking a nav link the QR/link
+     ends up like ".../#partners" and opens mid-page. Here we scroll to the
+     target ourselves and never change the URL, so the shared address stays
+     the clean base URL.
+  ------------------------------------------------------------------ */
+  var prefersReduced = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      var id = link.getAttribute("href").slice(1);
+      var target = id === "top" ? document.body : document.getElementById(id);
+      if (!target) return; // let unknown anchors behave normally
+      e.preventDefault();
+      var top = id === "top" ? 0 : target.getBoundingClientRect().top + window.pageYOffset - 64;
+      window.scrollTo({ top: top, behavior: prefersReduced ? "auto" : "smooth" });
+      if (typeof target.focus === "function") {
+        target.setAttribute("tabindex", "-1");
+        target.focus({ preventScroll: true });
+      }
+    });
+  });
+
+  /* ------------------------------------------------------------------
      Scroll reveal for sections/cards (respects reduced-motion via CSS).
   ------------------------------------------------------------------ */
   var targets = document.querySelectorAll(".agenda__item, .process li, .lead, .join__intro");
