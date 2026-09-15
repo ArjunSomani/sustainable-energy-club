@@ -23,23 +23,12 @@
   --sans:  "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper:    #10140f;
-    --paper-2:  #172016;
-    --panel:    #1b241b;
-    --tint:     #172016;
-    --ink:      #eef2e8;
-    --ink-soft: #a7b0a5;
-    --line:     #2e382c;
-    --forest:   #7fc795;
-    --forest-2: #9bd8ad;
-    --sun:      #e6a851;
-  }
-}
+/* The site uses a single bright light theme for everyone (no dark-mode
+   auto-switch), so it stays bright and the white sign-up form always matches
+   the page. */
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; color-scheme: light; }
 
 body {
   margin: 0;
@@ -139,12 +128,15 @@ a { color: var(--forest); }
 .join__intro { position: sticky; top: 88px; }
 .join__intro .h2 { margin: 10px 0 14px; }
 .join__intro .muted { max-width: 40ch; }
-.formframe { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; min-height: 460px; box-shadow: var(--shadow); }
-.formframe__bar { display: flex; align-items: center; gap: 9px; padding: 14px 20px; font-weight: 600; font-size: .95rem; color: var(--ink); background: var(--panel); border-bottom: 1px solid var(--line); }
-.formframe__dot { width: 9px; height: 9px; border-radius: 50%; background: var(--forest); box-shadow: 0 0 0 4px color-mix(in srgb, var(--forest) 18%, transparent); }
-.formframe iframe { display: block; width: 100%; border: 0; background: #fff; }
-.formframe__placeholder { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; padding: 40px; background: var(--panel); }
-.formframe__placeholder .muted { max-width: 42ch; margin-inline: auto; }
+/* The Google Form is always light, so its card stays white in every theme.
+   Fixed colors here (not theme tokens) keep the form from floating on a dark
+   background in dark mode. */
+.formframe { position: relative; background: #ffffff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; min-height: 460px; box-shadow: var(--shadow); }
+.formframe__bar { display: flex; align-items: center; gap: 9px; padding: 14px 20px; font-weight: 600; font-size: .95rem; color: #15321f; background: #ffffff; border-bottom: 1px solid #e7ebe6; }
+.formframe__dot { width: 9px; height: 9px; border-radius: 50%; background: #1a7a43; box-shadow: 0 0 0 4px rgba(26, 122, 67, .18); }
+.formframe iframe { display: block; width: 100%; border: 0; background: #ffffff; }
+.formframe__placeholder { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; padding: 40px; background: #ffffff; color: #15321f; }
+.formframe__placeholder .muted { max-width: 42ch; margin-inline: auto; color: #55605a; }
 
 /* --- footer --- */
 .footer { border-top: 1px solid var(--line); padding-block: 32px; }
