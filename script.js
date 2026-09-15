@@ -20,17 +20,20 @@
     if (isReal) {
       iframe.src = url;
       if (placeholder) placeholder.remove();
-      iframe.addEventListener("load", sizeToViewport);
-      sizeToViewport();
-      window.addEventListener("resize", sizeToViewport);
+      applyHeight();
+      window.addEventListener("resize", applyHeight);
     }
   }
 
-  function sizeToViewport() {
+  function applyHeight() {
     if (!iframe) return;
-    // Give the form generous height; Google Forms handle their own scrolling.
-    var h = Math.max(720, Math.round(window.innerHeight * 0.85));
-    iframe.style.height = h + "px";
+    // Show the whole Google Form (it can't report its height across origins, so
+    // we use the height it was published at, with extra room on narrow screens
+    // where the form reflows taller). If you edit the form and it changes
+    // length, update data-google-form-height in index.html.
+    var base = parseInt(iframe.getAttribute("data-google-form-height"), 10) || 1200;
+    var extra = window.innerWidth < 500 ? 260 : 60; // phones wrap fields -> taller
+    iframe.style.height = base + extra + "px";
   }
 
   /* ------------------------------------------------------------------
