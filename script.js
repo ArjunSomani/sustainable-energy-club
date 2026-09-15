@@ -1,4 +1,4 @@
-// LWHS Sustainable Energy Club — small progressive-enhancement script.
+// LWHS Sustainable Energy Club: small progressive-enhancement script.
 
 (function () {
   "use strict";

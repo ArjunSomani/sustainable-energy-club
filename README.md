@@ -1,37 +1,34 @@
-# LWHS Sustainable Energy Club — website
+# LWHS Sustainable Energy Club website
 
-A clean, responsive one-page site for the club: purpose, goals, the Community
-Powering Partners Project, and an embedded sign-up form.
+A responsive one-page site for the club: purpose, goals, the Community Powering
+Partners Project, and an embedded Google Form sign-up.
 
 ## Files
-- `index.html` — the page content
-- `styles.css` — styling (light + dark, mobile-friendly)
-- `script.js` — loads the Google Form and adds subtle scroll animations
+- `index.html`: the page content
+- `styles.css`: styling (light and dark, mobile friendly)
+- `script.js`: loads the Google Form and adds subtle scroll animations
+- `vercel.json`: deploy config for Vercel (clean URLs, security and cache headers)
 
-## Connect your sign-up form (2 minutes)
+## The sign-up form
+The club's Google Form is already embedded in the Join section. Responses collect
+in the form's **Responses** tab (and any linked Google Sheet).
 
-The site is built to embed a **Google Form** so responses collect in a Google
-Sheet you own — the easiest way to view, filter, and export sign-ups.
-
-1. Create a Google Form (e.g. name, email/grade, why you're interested).
-2. In the form, click **Send** → the **`< >`** (embed HTML) tab.
-3. Copy **only the `src="..."` URL**. It looks like:
-   `https://docs.google.com/forms/d/e/XXXXXXXX/viewform?embedded=true`
-4. Open `index.html`, find the `<iframe>` in the **Join** section, and paste that
-   URL into `data-google-form-src="..."` (replacing `PASTE_YOUR_GOOGLE_FORM_EMBED_URL_HERE`).
-5. Save. The form now appears on the page automatically.
-
-**To see responses:** open your Google Form → **Responses** tab → **Link to Sheets**.
+You can edit the form freely (questions, wording, theme) and the changes show up
+on the site automatically, since the page loads the live form. Two exceptions:
+- If you create a brand new form, paste its new embed URL into
+  `data-google-form-src` on the `<iframe>` in `index.html`.
+- If the form gets much longer or shorter, update `data-google-form-height` on
+  that same `<iframe>` so it fits without an inner scrollbar.
 
 ## Preview locally
-Open `index.html` in a browser, or run a tiny server:
+Open `index.html` in a browser, or run a small server:
 ```
 python3 -m http.server 8000
 ```
 then visit http://localhost:8000
 
-## Publish for free with GitHub Pages
-1. Push this branch/repo to GitHub.
-2. Repo **Settings** → **Pages** → **Source: Deploy from a branch** → pick the
-   branch and `/ (root)` → **Save**.
-3. Your site goes live at `https://<username>.github.io/<repo>/`.
+## Deploy with Vercel
+1. Import the repo at vercel.com (framework preset: Other, empty build command).
+2. Set the production branch to `main` in Vercel, or make `main` the repo's
+   default branch on GitHub.
+3. Every push to `main` deploys to production; other branches get preview URLs.
